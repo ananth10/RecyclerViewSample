@@ -24,13 +24,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="StaggerdLayoutManager"
+            android:text="StaggerdGridLayoutManager"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </FrameLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/friends_list"
+        android:id="@+id/_stagger_food_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/top_lay"

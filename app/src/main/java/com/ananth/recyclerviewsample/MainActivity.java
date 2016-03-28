@@ -37,11 +37,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, UsingLinearLayoutManager.class));
                 break;
             case R.id.grid_layout:
-//                startActivity(new Intent(MainActivity.this, GridLayoutManager.class));
-                Toast.makeText(MainActivity.this,"Coming soon",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, UsingGridLayoutManager.class));
+//                Toast.makeText(MainActivity.this,"Coming soon",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.staggered_layout:
-//                startActivity(new Intent(MainActivity.this, StaggeredGridLayoutManager.class));
+//                startActivity(new Intent(MainActivity.this, UsingStaggerdLayoutManager.class));
                 Toast.makeText(MainActivity.this,"Coming soon",Toast.LENGTH_SHORT).show();
                 break;
         }

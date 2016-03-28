@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -58,6 +59,7 @@ public class UsingLinearLayoutManager extends AppCompatActivity {
         private final TypedValue mTypedValue = new TypedValue();
         private int mBackground;
         private List<Integer> mValues;
+        public  Context mContext;
 
         public static class ViewHolder extends RecyclerView.ViewHolder {
             public String mBoundString;
@@ -96,10 +98,16 @@ public class UsingLinearLayoutManager extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(final ViewHolder holder, int position) {
+        public void onBindViewHolder(final ViewHolder holder, final int position) {
 //            holder.mBoundString = mValues.get(position);
 //            holder.mTextView.setText(mValues.get(position));
 
+            holder.mView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(mContext,"Item "+position,Toast.LENGTH_SHORT).show();
+                }
+            });
             Glide.with(holder.mImageView.getContext())
                     .load(FoodsItems.getRandomCheeseDrawable())
                     .fitCenter()
